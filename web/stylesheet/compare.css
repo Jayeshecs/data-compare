@@ -1,0 +1,163 @@
+@CHARSET "ISO-8859-1";
+
+* {
+    /* Global properties go here */
+    font-family: verdana, tahoma, arial;
+    font-size: 8pt;
+	/*font-weight: bold;*/
+    /* IE only properties */
+    scrollbar-face-color: #FFFFFF;
+    scrollbar-shadow-color: #DDDDDD;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-3Dlight-color: #AAAAAA;
+    scrollbar-darkshadow-color: #AAAAAA;
+    scrollbar-track-color: #EFEFEF;
+    scrollbar-arrow-color: #AAAAAA;
+}
+
+BODY.compareBody {
+	
+	
+	width: 98%;
+	height: 96%;
+	
+	border: 1px solid gray;
+}
+
+DIV.main {
+
+	border: 1px solid gray;
+	
+	height: 100%;
+	width: 100%;
+	
+	background-color: transparent;
+
+}
+
+DIV.inputContainer {
+
+	border: 1px solid gray;
+	
+	height: 100px;
+	width: 100%;
+	
+	background-color: transparent;
+}
+
+DIV.outputContainer {
+
+	border: 1px solid gray;
+
+	width: 100%;
+	
+	background-color: transparent;
+	
+	overflow: auto;
+}
+
+TABLE.compareTable {
+
+	height: 100%;
+	width: 100%;
+	
+	border: 1px solid black;
+}
+
+TR.odd {
+	
+	background: cyan;
+}
+
+TR.even {
+	
+	background: yellow;
+}
+
+TD.headerCell {
+	
+	font-weight: bolder;
+	
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+	spacing: 0px;
+	background: transparent;
+}
+
+TD.dataCell {
+	
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+	spacing: 0px;
+	background: transparent;
+}
+
+TD.cBlue {
+	
+	font-weight: bold;
+	color: blue;
+}
+
+
+TD.cGreen {
+	
+	font-weight: bold;
+	color: green;
+}
+
+DIV.dialog {
+
+	border: inset;
+
+	width: 800px;
+	
+	height: 500px;
+	
+	background-color: white;
+	
+	overflow: auto;
+	
+	z-index: 99;
+	
+	position: absolute;
+	
+	left: 100px;
+	
+	top: 100px;
+	
+	display: none;
+}
+
+DIV.divButtonPanel {
+
+	border: outset;
+
+	width: 100%;
+	
+	height: 24px;
+	
+	background-color: silver;
+	
+	overflow: auto;
+}
+
+DIV.content {
+
+	border: 0px;
+
+	width: 100%;
+	
+	height: 476px;
+	
+	background-color: white;
+	
+	overflow: auto;
+}
+
+TEXTAREA.contentArea {
+	
+	width: 99%;
+	height: 470px;
+	
+	overflow: auto;
+}

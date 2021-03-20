@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<link rel=stylesheet type="text/css" href="../stylesheet/compare.css" />
+<script type="text/javascript" src="../javascript/constants.js"></script>
+<script type="text/javascript" src="../javascript/StringBuffer.js"></script>
+<script type="text/javascript" src="../javascript/compare.js"></script>
+<script type="text/javascript" src="../javascript/compareInfo.js"></script>
+<script type="text/javascript">
+
+function init() {
+
+	generateOutput(document.all.main)
+}
+
+function showContent(content) {
+
+	document.all.txtContent.innerText = content;
+
+	document.all.divDialog.style.display = "block";
+}
+
+</script>
+</head>
+<body class="compareBody" onload="init()">
+<div id="divButtonPanel" class="buttonPanel" >
+	<input type="button" value="Generate Consolidated Data Sync Script" onclick="generateAllDataSyncScript();" />
+</div>
+<div id="main" class="main" >
+</div>
+<div id="divDialog" class="dialog" >
+	<div id="divButtonPanel" class="buttonPanel" >
+		<input type="button" value="Close" onclick="hide(document.all.divDialog)" />
+	</div>
+	<div id="divContent" class="content" >
+		<textarea id="txtContent" class="contentArea"></textarea>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="dist" name="Create distribution for Project DataCompare">
+	<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+	<!--ANT 1.7 is required                                        -->
+	<target name="create_run_jar">
+		<jar destfile="${basedir}/../dist/dataCompareExe.jar" filesetmanifest="mergewithoutmain">
+			<manifest>
+				<attribute name="Built-By" value="${user.name}" />
+				<attribute name="Main-Class" value="com.smartstream.db.compare.DataCompare" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="${basedir}/../bin" />
+			<zipfileset excludes="META-INF/*.SF" src="${basedir}/../lib/ojdbc8.jar"/>
+			<zipfileset excludes="META-INF/*.SF" src="${basedir}/../lib/postgresql-42.2.5.jar"/>
+		</jar>
+	</target>
+	<target name="pre">
+		<delete dir="${basedir}/../dist" failonerror="false" />
+		<mkdir dir="${basedir}/../dist" />
+	</target>
+	<target name="build" depends="create_run_jar">
+	</target>
+	<target name="post">
+		<!-- copy libs -->
+		<mkdir dir="${basedir}/../dist/lib" />
+		<copy todir="${basedir}/../dist/lib">
+		  <fileset dir="${basedir}/../lib"/>
+		</copy>
+		<!-- copy Web -->
+		<mkdir dir="${basedir}/../dist/web" />
+		<copy todir="${basedir}/../dist/web">
+		  <fileset dir="${basedir}/../web"/>
+		</copy>
+		<!-- copy readme -->
+		<copy todir="${basedir}/../dist/">
+		  <fileset dir="${basedir}/../files/" includes="*.*"/>
+		</copy>
+	</target>
+	<target name="dist" depends="pre,build,post">
+	</target>
+</project>
