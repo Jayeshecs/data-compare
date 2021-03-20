@@ -6,7 +6,7 @@
 		<jar destfile="${basedir}/../dist/dataCompareExe.jar" filesetmanifest="mergewithoutmain">
 			<manifest>
 				<attribute name="Built-By" value="${user.name}" />
-				<attribute name="Main-Class" value="com.smartstream.db.compare.DataCompare" />
+				<attribute name="Main-Class" value="db.compare.DataCompare" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
 			<fileset dir="${basedir}/../bin" />

@@ -1,11 +1,3 @@
-//
-// Copyright (c) 2004 SmartStream Technologies Ltd. All Rights Reserved.
-//
-// This software is the confidential and proprietary information
-// of SmartStream Technologies Ltd ("Confidential Information").
-// You shall not disclose such Confidential Information and shall use
-// it only in accordance with the terms of your license agreement.
-//
 
 function StringBuffer() {
 	this.buffer=[];

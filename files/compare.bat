@@ -10,6 +10,6 @@ REM order to get automatically included as registered libraries within this batc
 set CLASSPATH=.\lib\ojdbc8.jar;.\lib\postgresql-42.2.5.jar
 set CLASSPATH=%CLASSPATH%;.\dataCompareExe.jar;
 
-java -cp %CLASSPATH% -Xms512m -Xmx1536m com.smartstream.db.compare.DataCompare %1 %2 %3
+java -cp %CLASSPATH% -Xms512m -Xmx1536m db.compare.DataCompare %1 %2 %3
 
 endlocal
